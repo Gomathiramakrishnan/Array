@@ -1,0 +1,41 @@
+package day1z;
+import java.util.*;
+public class Day1z {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("n:");
+		int n=s.nextInt();
+		int[] a=new int[n];
+		for(int i=0;i<n;a[i++]=s.nextInt());
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[i]>a[j]) {
+					int temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+		}
+		for(int i=0;i<n;i++) {
+		System.out.println(a[i]);
+		}
+	}
+}
+	
+output:
+
+n:
+4
+
+Elements in Array
+4
+3
+2
+1
+
+Reversed elements
+1
+2
+3
+4
+
